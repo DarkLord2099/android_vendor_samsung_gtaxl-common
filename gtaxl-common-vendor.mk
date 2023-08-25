@@ -6,7 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/gtaxl-common
 
 PRODUCT_COPY_FILES += \
-    vendor/samsung/gtaxl-common/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
+    vendor/samsung/gtaxl-common/proprietary/vendor/etc/init/android.hardware.drm-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.widevine.rc \
     vendor/samsung/gtaxl-common/proprietary/vendor/firmware/Data.msc:$(TARGET_COPY_OUT_VENDOR)/firmware/Data.msc \
     vendor/samsung/gtaxl-common/proprietary/vendor/firmware/bdwlan30.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan30.bin \
     vendor/samsung/gtaxl-common/proprietary/vendor/firmware/bdwlan32.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan32.bin \
@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     libsensorlistener \
     libstainkiller \
     libuniplugin \
-    libwvhidl \
-    android.hardware.drm@1.4-service.widevine \
+    libwvaidl \
+    manifest_android.hardware.drm-service.widevine \
+    android.hardware.drm-service.widevine \
     wcnss_filter

@@ -148,14 +148,14 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libwvhidl",
+	name: "libwvaidl",
 	owner: "samsung",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libwvhidl.so"],
+			srcs: ["proprietary/vendor/lib64/libwvaidl.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -164,10 +164,19 @@ cc_prebuilt_library_shared {
 	soc_specific: true,
 }
 
-cc_prebuilt_binary {
-	name: "android.hardware.drm@1.4-service.widevine",
+prebuilt_etc_xml {
+	name: "manifest_android.hardware.drm-service.widevine",
 	owner: "samsung",
-	srcs: ["proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine"],
+	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "android.hardware.drm-service.widevine",
+	owner: "samsung",
+	srcs: ["proprietary/vendor/bin/hw/android.hardware.drm-service.widevine"],
 	check_elf_files: false,
 	strip: {
 		none: true,
